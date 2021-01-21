@@ -1,17 +1,5 @@
 //Copy & Paste
-/***********************************************************************
- * Program:
- *    Assignment 00
- *    Brother Cook, CS124
- * Author:
- *    Bryce Maughan
- * Summary:
- *    I'm making a graphic
- *
- *    Estimated:  0.5  hrs
- *    Actual:     0.01  hrs
- *      Please describe briefly what was the most difficult part.
- ************************************************************************/
+
 
 #include <iostream>
 #include <iomanip>
