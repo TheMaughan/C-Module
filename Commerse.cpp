@@ -52,19 +52,19 @@ class Order{
         double getSubtotal();
         double getTax();
         double getTotal();
-        void addProduct(Product p1, Product p2);
+        double addProduct(Product p_number);
         void displayReceipt();
 };
 
-void Order::addProduct(Product p1, Product p2){
-    products.push_back(p1);
-    products.push_back(p2);
+double Order::addProduct(Product p_number){
+    products.push_back(p_number);
+    return 0;
 }
 
 double Order::getSubtotal(){
     double subTotal = 0;
     for (vector<Product>::iterator it = products.begin(); it != products.end(); ++it){
-        subTotal += p.getTotalPrice();
+        subTotal += .getTotalPrice();
     }
     
     return subTotal;
@@ -98,8 +98,8 @@ int main(){
 
     Order order1;
     order1.id = "1138";
-    order1.addProduct(p1);
-    order1.addProduct(p2);
+    order1.addProduct(p1.getTotalPrice(p1.price, p1.quantity));
+    order1.addProduct(p2.getTotalPrice(p2.price, p2.quantity));
     order1.getSubtotal();
     order1.displayReceipt();
 
