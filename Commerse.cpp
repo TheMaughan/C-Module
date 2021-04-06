@@ -50,17 +50,17 @@ class Order{
         double products;
     public:
         string id;
-        //vector<Product> products;
+        vector<Product> products;
         double getSubtotal();
         double getTax();
         double getTotal();
         double addProduct(Product p_number);
         void displayReceipt();
 
-        Order operator ++ (){
-            products += ;
-            return *this;
-        }
+        //Order operator ++ (){
+            //products += ;
+            //return *this;
+        //}
 };
 
 //double Order::addProduct(Product p_number){
