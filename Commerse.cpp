@@ -46,29 +46,37 @@ void Product::display(string i, string n, double p, double q){
  * 
  ***********************************************************************/
 class Order{
+    private:
+        double products;
     public:
         string id;
-        vector<Product> products;
+        //vector<Product> products;
         double getSubtotal();
         double getTax();
         double getTotal();
         double addProduct(Product p_number);
         void displayReceipt();
+
+        Order operator ++ (){
+            products += ;
+            return *this;
+        }
 };
 
-double Order::addProduct(Product p_number){
-    products.push_back(p_number);
-    return 0;
-}
+//double Order::addProduct(Product p_number){
+//    products.push_back(p_number);
+//    return 0;
+//}
 
-double Order::getSubtotal(){
-    double subTotal = 0;
-    for (vector<Product>::iterator it = products.begin(); it != products.end(); ++it){
-        subTotal += .getTotalPrice();
-    }
-    
-    return subTotal;
-}
+//double Order::getSubtotal(){
+//    double subTotal = 0;
+//    for (vector<Product>::iterator it = products.begin(); it != products.end(); ++it){
+//        cout << "it\n";
+//        cout << "products\n";
+//    }
+//    
+//    return subTotal;
+//}
 
 /**********************************************************************
  * MAIN
@@ -95,13 +103,16 @@ int main(){
     p2.quantity = 6;
     p2.display(p2.id, p2.name, p2.price, p2.quantity);
 
+    p1.getTotalPrice(p1.price, p1.quantity);
+    p2.getTotalPrice(p2.price, p2.quantity);
 
     Order order1;
     order1.id = "1138";
-    order1.addProduct(p1.getTotalPrice(p1.price, p1.quantity));
-    order1.addProduct(p2.getTotalPrice(p2.price, p2.quantity));
-    order1.getSubtotal();
-    order1.displayReceipt();
+    
+    //order1.addProduct(p1);
+    //order1.addProduct(p2);
+    //order1.getSubtotal();
+    //order1.displayReceipt();
 
 
   return 0;
