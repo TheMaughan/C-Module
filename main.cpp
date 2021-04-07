@@ -1,10 +1,6 @@
 /***********************************************************************
-* Program:
-*    Product
-* Author:
-*    Bryce Maughan
-* Summary: 
-*    Demonstrate OOP in C++
+ This Program is just an experiment, It's not complete:
+ Please Reffer to the 'Commerse.cpp' file for finnished product.
 ************************************************************************/
 
 #include <iostream>
