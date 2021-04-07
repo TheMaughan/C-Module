@@ -27,10 +27,16 @@ double Product::Price() const{
 double Product::Quantity() const{
     return quantity;
 }
-
+double totalPrice = 0;
 double Product::getTotalPrice(const double &price, const double &quantity) const {
     double totalPrice = price * quantity;
     return totalPrice;
+}
+
+Product& Product::operator * (Product p){
+    Product temp;
+    temp.Price() = this->price * p.Quantity();
+    return temp;
 }
 
 //display
@@ -39,6 +45,6 @@ ostream& operator<<(ostream &stream, const Product &product) {
     stream << "Name: " << product.Name() << endl;
     stream << "Price: " << product.Price() << endl;
     stream << "Quantity: " << product.Quantity() << endl;
-    stream << product.Name() << "(" << product.Quantity() << ") - $" << product.Price() * product.Quantity() << endl;
+    stream << product.Name() << "(" << product.Quantity() << ") - $" << totalPrice << endl;
     stream << "\n";
 }
