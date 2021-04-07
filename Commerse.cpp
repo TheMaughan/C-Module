@@ -46,7 +46,7 @@ class Product{
             return temp;
         }
         
-
+        // grabbing the Total Price:
         double getTotalPrice(){
             return price * quantity;
         }
@@ -170,13 +170,13 @@ class Customer{
             return grandTotal;
         }
 
-        void history(){
+        void history(){ // Just a little example of what I can display from the Customer's History:
             cout << "Customer Number: " << id << endl;
             cout << "Product Name | Quantity Ordered | Total Retail Price\n";
 
             for (vector<Order>::iterator it = orders.begin(); it != orders.end(); ++it){
                 cout << "Summary For Order: " << (*it).getId() << endl;
-                (*it).orderSummary(); //p.display();
+                (*it).orderSummary(); // I have to place 'it' within parentheses with the star pointer to get my member data.
             }
             cout << endl;
             cout << "------------ <| Customer: " << id << " Summary |> ------------\n";
@@ -193,7 +193,7 @@ class Customer{
 int main(){
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
-    cout.precision(2);
+    cout.precision(2); // All decimal places are rounded to hundreths
 
     // Customer Login:
     Customer customer("aa32", "Gandalf");
