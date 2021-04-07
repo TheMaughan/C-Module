@@ -1,6 +1,8 @@
 /***********************************************************************
  This Program is just an experiment, It's not complete:
  Please Reffer to the 'Commerse.cpp' file for finnished product.
+
+ This File is called by 'main.cpp' and 'product.h'
 ************************************************************************/
 
 #include <string>
@@ -32,7 +34,7 @@ double Product::Price() const{
 double Product::Quantity() const{
     return quantity;
 }
-double totalPrice = 0;
+//double totalPrice = 0;
 double Product::getTotalPrice(const double &price, const double &quantity) const {
     double totalPrice = price * quantity;
     return totalPrice;
@@ -50,6 +52,6 @@ ostream& operator<<(ostream &stream, const Product &product) {
     stream << "Name: " << product.Name() << endl;
     stream << "Price: " << product.Price() << endl;
     stream << "Quantity: " << product.Quantity() << endl;
-    stream << product.Name() << "(" << product.Quantity() << ") - $" << totalPrice << endl;
+    stream << product.Name() << "(" << product.Quantity() << ") - $" << product.getTotalPrice(product.Price(), product.Quantity()) << endl; //I think my compile problem is with 'getTotalPrice'.
     stream << "\n";
-}
+}// I'm having a hard time understandig the compile errors, I'm going to have to study more about those pointers to know what's happening...

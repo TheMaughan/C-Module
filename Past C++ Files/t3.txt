@@ -1,3 +1,0 @@
-This is the first line of the file.\n
-This is the second.\n
-The end is here at last.\n

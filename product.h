@@ -1,6 +1,9 @@
 /***********************************************************************
  This Program is just an experiment, It's not complete:
  Please Reffer to the 'Commerse.cpp' file for finnished product.
+
+ This file holds all the member data and is called by 'main.cpp' 
+    and 'product.cpp'
 ************************************************************************/
 
 #ifndef PRODUCT_H
@@ -11,8 +14,8 @@
 using namespace std;
 
 ///**********************************************************************
- //* This is a class
- //* 
+ //* This is the Product class
+ //*    This class owns all member data for Products
  //***********************************************************************/
 class Product{
     private:

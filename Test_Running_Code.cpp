@@ -1,12 +1,9 @@
-//Copy & Paste
-
-
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
 /**********************************************************************
- * Main function, displayes "Hello World"
+ * Main function, displayes some ASCII art
  ***********************************************************************/
 int main()
 {
