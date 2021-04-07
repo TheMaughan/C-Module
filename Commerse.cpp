@@ -171,7 +171,7 @@ class Customer{
         }
 
         void history(){
-            cout << "Confimation Number: " << id << endl;
+            cout << "Customer Number: " << id << endl;
             cout << "Product Name | Quantity Ordered | Total Retail Price\n";
 
             for (vector<Order>::iterator it = orders.begin(); it != orders.end(); ++it){
